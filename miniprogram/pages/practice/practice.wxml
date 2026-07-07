@@ -1,19 +1,34 @@
-<view class="container">
-  <view class="card">
-    <view class="card-title">分层互动练习</view>
-    <view class="muted">每次抽题，输入答案后核对。错题会保存在本机。</view>
-    <button class="btn" bindtap="draw">重新抽题</button>
-    <button class="btn btn-secondary" bindtap="wrongBook">错题本模式</button>
+<view class="container practice-page">
+  <view class="hero">
+    <view class="hero-kicker">PRACTICE</view>
+    <view class="hero-title">分层互动练习</view>
+    <view class="hero-sub">每次抽题，输入答案后核对。做错会自动进入本机错题本。</view>
   </view>
+
+  <view class="card action-card">
+    <view class="card-title">今日练习</view>
+    <view class="muted">先做基础题，遇到错题再回到避坑指南复盘。</view>
+    <view class="btn-row">
+      <button class="btn" bindtap="draw">重新抽题</button>
+      <button class="btn btn-secondary" bindtap="wrongBook">错题本模式</button>
+    </view>
+  </view>
+
   <block wx:for="{{list}}" wx:key="id">
-    <view class="card">
-      <view><text class="badge">{{item.module}}</text><text class="badge">{{item.difficulty}}</text></view>
-      <view class="card-title">{{index+1}}. {{item.title}}</view>
-      <view>{{item.question}}</view>
-      <input class="input" data-id="{{item.id}}" bindinput="onInput" placeholder="输入答案" />
+    <view class="card exercise-card">
+      <view>
+        <text class="badge">{{item.module}}</text>
+        <text class="badge badge-warm">{{item.difficulty}}</text>
+      </view>
+      <view class="card-title question-title">{{index+1}}. {{item.title}}</view>
+      <view class="question-text">{{item.question}}</view>
+      <input class="input" data-id="{{item.id}}" bindinput="onInput" placeholder="输入答案，例如 3/4、72、85%" />
       <button class="btn" data-id="{{item.id}}" bindtap="check">核对答案</button>
       <view wx:if="{{item.feedback}}" class="{{item.ok ? 'ok' : 'bad'}}">{{item.feedback}}</view>
-      <view wx:if="{{item.show}}" class="muted">答案：{{item.answer}}。{{item.explain}}</view>
+      <view wx:if="{{item.show}}" class="answer-panel">
+        <view class="answer-title">答案：{{item.answer}}</view>
+        <view class="muted">{{item.explain}}</view>
+      </view>
     </view>
   </block>
 </view>

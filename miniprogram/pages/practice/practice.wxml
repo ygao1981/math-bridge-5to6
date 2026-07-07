@@ -2,14 +2,14 @@
   <view class="hero">
     <view class="hero-kicker">PRACTICE</view>
     <view class="hero-title">分层互动练习</view>
-    <view class="hero-sub">每次抽题，输入答案后核对。做错会自动进入本机错题本。</view>
+    <view class="hero-sub">当前题库约 {{total}} 道，覆盖分数、长方体正方体、比、百分数和统计。</view>
   </view>
 
   <view class="card action-card">
     <view class="card-title">今日练习</view>
-    <view class="muted">先做基础题，遇到错题再回到避坑指南复盘。</view>
+    <view class="muted">每次随机抽 10 题。先做基础题，遇到错题再回到避坑指南复盘。</view>
     <view class="btn-row">
-      <button class="btn" bindtap="draw">重新抽题</button>
+      <button class="btn" bindtap="draw">随机抽题</button>
       <button class="btn btn-secondary" bindtap="wrongBook">错题本模式</button>
     </view>
   </view>

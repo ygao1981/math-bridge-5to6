@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="hero"><view class="hero-title">核心概念速查</view><view class="hero-sub">公式、例子、易错提醒。</view></view>
+  <block wx:for="{{list}}" wx:key="concept">
+    <view class="card">
+      <text class="badge">{{item.module}}</text>
+      <view class="card-title">{{item.concept}}</view>
+      <view>{{item.formula}}</view>
+      <view class="muted">{{item.note}}</view>
+    </view>
+  </block>
+</view>

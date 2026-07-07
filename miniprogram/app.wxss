@@ -1,0 +1,15 @@
+page { background: #f7f4ed; color: #2f2a23; font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+.container { padding: 24rpx; padding-bottom: 56rpx; }
+.hero { background: linear-gradient(135deg, #28513a, #2c8a55); color: #fff; padding: 36rpx; border-radius: 32rpx; margin-bottom: 24rpx; }
+.hero-title { font-size: 48rpx; font-weight: 900; }
+.hero-sub { font-size: 28rpx; opacity: .9; margin-top: 12rpx; }
+.card { background: #fffdf8; border: 1px solid #e8dfd0; border-radius: 28rpx; padding: 28rpx; margin-bottom: 24rpx; box-shadow: 0 10rpx 28rpx rgba(48,42,32,.06); }
+.card-title { font-size: 34rpx; font-weight: 900; margin-bottom: 12rpx; }
+.muted { color: #776f64; font-size: 26rpx; }
+.badge { display: inline-block; padding: 6rpx 16rpx; border-radius: 999rpx; background: #e9f3eb; color: #1f5d38; font-weight: 800; font-size: 24rpx; margin-right: 8rpx; margin-bottom: 8rpx; }
+.btn { background: #287a49; color: #fff; border-radius: 999rpx; font-weight: 900; margin-top: 16rpx; }
+.btn-secondary { background: #fff; color: #287a49; border: 1px solid #e8dfd0; }
+.input { border: 1px solid #e8dfd0; background: #fff; padding: 18rpx; border-radius: 18rpx; margin: 16rpx 0; }
+.ok { background: #e7f5e7; color: #1f5d38; padding: 16rpx; border-radius: 18rpx; }
+.bad { background: #fae7e5; color: #8c2b25; padding: 16rpx; border-radius: 18rpx; }
+.row { display: flex; gap: 16rpx; flex-wrap: wrap; }

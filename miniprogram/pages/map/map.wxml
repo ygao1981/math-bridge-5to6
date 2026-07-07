@@ -1,11 +1,21 @@
-<view class="container">
-  <view class="hero"><view class="hero-title">知识思维导图</view><view class="hero-sub">看清前后关联，知道为什么要学。</view></view>
+<view class="container map-page">
+  <view class="hero">
+    <view class="hero-kicker">KNOWLEDGE MAP</view>
+    <view class="hero-title">知识思维导图</view>
+    <view class="hero-sub">看清前置知识、后续关联和难度，知道为什么要补桥。</view>
+  </view>
+
   <block wx:for="{{list}}" wx:key="title">
-    <view class="card">
-      <text class="badge">{{item.module}}</text>
+    <view class="card map-card">
+      <view>
+        <text class="badge">{{item.module}}</text>
+        <text class="badge badge-warm">{{item.difficulty}}</text>
+      </view>
       <view class="card-title">{{item.title}}</view>
-      <view class="muted">等级：{{item.level}}</view>
-      <view>关联：{{item.links}}</view>
+      <view class="muted">掌握等级：{{item.level}}</view>
+      <view class="relation-box">关联：{{item.links}}</view>
+      <view class="map-row"><text class="map-label">前置：</text>{{item.before}}</view>
+      <view class="map-row"><text class="map-label">后续：</text>{{item.after}}</view>
     </view>
   </block>
 </view>

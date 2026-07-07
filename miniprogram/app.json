@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/practice/practice",
     "pages/formulas/formulas",
+    "pages/life/life",
     "pages/map/map",
     "pages/mistakes/mistakes"
   ],
@@ -20,6 +21,7 @@
       { "pagePath": "pages/index/index", "text": "首页" },
       { "pagePath": "pages/practice/practice", "text": "练习" },
       { "pagePath": "pages/formulas/formulas", "text": "速查" },
+      { "pagePath": "pages/life/life", "text": "生活" },
       { "pagePath": "pages/mistakes/mistakes", "text": "避坑" }
     ]
   },

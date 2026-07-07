@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="hero">
+    <view class="hero-title">五升六数学桥</view>
+    <view class="hero-sub">离线小程序版：今日任务、知识图谱、速查卡、分层练习。</view>
+  </view>
+  <view class="card">
+    <view class="card-title">今日任务</view>
+    <view class="muted">建议每天 10 到 40 分钟，先保持连续性，再追求难度。</view>
+    <button class="btn" bindtap="goPractice">开始练习</button>
+  </view>
+  <view class="row">
+    <view class="card mini" bindtap="goMap"><view class="card-title">知识图谱</view><view class="muted">看前后关联</view></view>
+    <view class="card mini" bindtap="goFormulas"><view class="card-title">速查卡</view><view class="muted">背概念公式</view></view>
+  </view>
+</view>

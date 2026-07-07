@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>五升六数学桥｜暑期衔接自学工具</title>
+  <meta name="description" content="江苏小学数学五升六暑期衔接：知识图谱、公式速查、分层练习、生活化解读、避坑指南。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="eyebrow">MATH BRIDGE · 5 TO 6</div>
+      <h1>五升六数学桥</h1>
+      <p class="subtitle">从五年级下学期旧版教材，平稳过渡到六年级上学期新版教材。先补断层，再预习主线；先理解概念，再分层练习。</p>
+      <div class="header-actions">
+        <a class="btn" href="#practice">开始抽卡做题</a>
+        <a class="btn secondary" href="#map">看知识图谱</a>
+        <button class="btn secondary" id="printBtn">打印学习资料</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="top-nav">
+    <a href="#bridge">断层分析</a>
+    <a href="#plan">暑期规划</a>
+    <a href="#map">思维导图</a>
+    <a href="#formulas">速查表</a>
+    <a href="#practice">分层练习</a>
+    <a href="#life">生活化解读</a>
+    <a href="#pitfalls">避坑指南</a>
+    <a href="#progress">学习进度</a>
+  </nav>
+
+  <main>
+    <section class="section" id="progress">
+      <div class="section-head">
+        <div>
+          <h2>学习进度</h2>
+          <p class="section-desc">进度只保存在当前浏览器本地，不需要登录，不上传数据。</p>
+        </div>
+        <button class="btn warning" id="resetBtn">清空进度</button>
+      </div>
+      <div class="card progress-wrap">
+        <div class="progress-bar"><span id="progressBar"></span></div>
+        <strong id="progressText">0%</strong>
+      </div>
+      <div class="grid auto" id="dashboard"></div>
+    </section>
+
+    <section class="section" id="bridge">
+      <h2>教材断层分析</h2>
+      <p class="section-desc">孩子暑假最怕“看似会了，开学突然跟不上”。先看断层在哪里。</p>
+      <div class="grid three" id="bridgeCards"></div>
+    </section>
+
+    <section class="section" id="plan">
+      <h2>6 周暑期规划</h2>
+      <p class="section-desc">每天 35–50 分钟，按“温故—补断层—预习—综合”的节奏推进。</p>
+      <div class="timeline" id="weeklyPlan"></div>
+    </section>
+
+    <section class="section" id="map">
+      <h2>核心知识思维导图</h2>
+      <p class="section-desc">按知识板块展示难度、等级、前置知识和后续关联。勾选表示孩子已经掌握。</p>
+      <div class="map-grid" id="knowledgeMap"></div>
+    </section>
+
+    <section class="section" id="formulas">
+      <h2>核心概念速查表</h2>
+      <p class="section-desc">整本六上衔接最常用的概念、公式、单位和易考提醒。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>板块</th><th>概念</th><th>公式/结论</th><th>等级</th><th>提醒</th></tr></thead>
+          <tbody id="formulaBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="practice">
+      <div class="section-head">
+        <div>
+          <h2>分层互动练习题</h2>
+          <p class="section-desc">基础题巩固概念，提高题专攻错题，挑战题拓展思维。可以筛选，也可以随机抽卡。</p>
+        </div>
+        <span class="badge" id="exerciseCount">0 道题</span>
+      </div>
+      <div class="filters">
+        <select id="moduleFilter" aria-label="选择知识板块"></select>
+        <select id="difficultyFilter" aria-label="选择难度"></select>
+        <button class="btn" id="randomBtn">随机抽一题</button>
+      </div>
+      <div class="grid two" id="exerciseList"></div>
+    </section>
+
+    <section class="section" id="life">
+      <h2>生活化解读手册</h2>
+      <p class="section-desc">让孩子知道数学不是只为了考试，而是用来理解生活、做计划、做判断。</p>
+      <div class="grid two" id="lifeCases"></div>
+    </section>
+
+    <section class="section" id="pitfalls">
+      <h2>数学避坑指南</h2>
+      <p class="section-desc">高频错点、错误示范、正确做法、记忆口诀。错题复盘时重点看这里。</p>
+      <div class="grid two" id="pitfalls"></div>
+    </section>
+
+    <section class="section" id="notes-section">
+      <h2>孩子自己的错题备注</h2>
+      <p class="section-desc">建议孩子用自己的话写：我错在哪里？下次看到什么关键词要警惕？</p>
+      <textarea class="notes-area" id="notes" placeholder="例：看到“剩下的几分之几”，要先算剩下多少，单位1会变化……"></textarea>
+    </section>
+  </main>
+
+  <footer class="footer"><p>五升六数学桥 · 纯静态网页版 · 不需要后台 API · 可迁移微信小程序</p></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

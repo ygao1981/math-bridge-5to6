@@ -2,7 +2,7 @@
   <view class="hero home-hero">
     <view class="hero-kicker">MATH BRIDGE · 5 TO 6</view>
     <view class="hero-title">五升六数学桥</view>
-    <view class="hero-sub">先补断层，再预习主线。用知识图谱、速查卡、分层练习和避坑指南，帮孩子平稳衔接六年级数学。</view>
+    <view class="hero-sub">先补断层，再预习主线。用知识图谱、速查卡、分层练习、生活解读和避坑指南，帮孩子平稳衔接六年级数学。</view>
     <view class="bridge-visual">
       <view class="num">5</view>
       <view class="bridge-line"></view>
@@ -26,6 +26,14 @@
     <button class="btn" bindtap="goPractice">开始练习</button>
   </view>
 
+  <view class="section-title">学习进度</view>
+  <view class="stat-grid">
+    <view class="stat-card"><view class="stat-num">{{stats.done}}</view><view class="stat-label">已练题目</view></view>
+    <view class="stat-card"><view class="stat-num">{{stats.right}}</view><view class="stat-label">做对题目</view></view>
+    <view class="stat-card"><view class="stat-num">{{stats.wrong}}</view><view class="stat-label">错题次数</view></view>
+    <view class="stat-card"><view class="stat-num">{{stats.dayCount}}</view><view class="stat-label">学习天数</view></view>
+  </view>
+
   <view class="section-title">学习入口</view>
   <view class="entry-grid">
     <view class="entry-card green" bindtap="goMap">
@@ -43,6 +51,11 @@
       <view class="entry-title">分层练习</view>
       <view class="entry-desc">抽题秒批改</view>
     </view>
+    <view class="entry-card yellow" bindtap="goLife">
+      <view class="entry-icon">🏡</view>
+      <view class="entry-title">生活解读</view>
+      <view class="entry-desc">知道怎么用</view>
+    </view>
     <view class="entry-card red" bindtap="goMistakes">
       <view class="entry-icon">⚠️</view>
       <view class="entry-title">避坑指南</view>
@@ -52,26 +65,8 @@
 
   <view class="section-title">暑假补桥路线</view>
   <view class="route card">
-    <view class="route-item">
-      <view class="route-dot">1</view>
-      <view>
-        <view class="route-title">补断层</view>
-        <view class="muted">长方体正方体、分数乘法先补齐。</view>
-      </view>
-    </view>
-    <view class="route-item">
-      <view class="route-dot">2</view>
-      <view>
-        <view class="route-title">接六上</view>
-        <view class="muted">分数除法、比、百分数建立主线。</view>
-      </view>
-    </view>
-    <view class="route-item">
-      <view class="route-dot">3</view>
-      <view>
-        <view class="route-title">练错题</view>
-        <view class="muted">用避坑指南复盘错误原因。</view>
-      </view>
-    </view>
+    <view class="route-item"><view class="route-dot">1</view><view><view class="route-title">补断层</view><view class="muted">长方体正方体、分数乘法先补齐。</view></view></view>
+    <view class="route-item"><view class="route-dot">2</view><view><view class="route-title">接六上</view><view class="muted">分数除法、比、百分数建立主线。</view></view></view>
+    <view class="route-item"><view class="route-dot">3</view><view><view class="route-title">练错题</view><view class="muted">用避坑指南复盘错误原因。</view></view></view>
   </view>
 </view>

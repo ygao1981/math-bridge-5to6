@@ -1,1 +1,9 @@
-.card-title { line-height: 1.4; }
+.practice-page { padding-top: 22rpx; }
+.action-card { border-left: 8rpx solid #287a49; }
+.btn-row { display: flex; gap: 16rpx; }
+.btn-row .btn { flex: 1; }
+.exercise-card { border-left: 8rpx solid #287a49; }
+.question-title { margin-top: 10rpx; line-height: 1.4; }
+.question-text { margin-top: 10rpx; font-size: 32rpx; font-weight: 800; }
+.answer-panel { margin-top: 16rpx; padding: 18rpx; border-radius: 20rpx; background: #f5efe4; }
+.answer-title { color: #9b5b16; font-weight: 900; }

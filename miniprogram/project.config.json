@@ -1,0 +1,17 @@
+{
+  "description": "五升六数学桥微信小程序离线版",
+  "packOptions": { "ignore": [] },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.5.7",
+  "appid": "touristappid",
+  "projectname": "math-bridge-5to6",
+  "miniprogramRoot": "./",
+  "condition": {}
+}

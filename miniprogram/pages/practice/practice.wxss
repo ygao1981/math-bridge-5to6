@@ -1,7 +1,7 @@
 .practice-page { padding-top: 22rpx; }
 .action-card { border-left: 8rpx solid #287a49; }
-.btn-row { display: flex; gap: 16rpx; }
-.btn-row .btn { flex: 1; }
+.mode-grid { display: grid; grid-template-columns: 1fr; gap: 10rpx; margin-top: 14rpx; }
+.mode-grid .btn { margin-top: 6rpx; }
 .exercise-card { border-left: 8rpx solid #287a49; }
 .question-title { margin-top: 10rpx; line-height: 1.4; }
 .question-text { margin-top: 10rpx; font-size: 32rpx; font-weight: 800; }

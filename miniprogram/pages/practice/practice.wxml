@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card">
+    <view class="card-title">分层互动练习</view>
+    <view class="muted">每次抽题，输入答案后核对。错题会保存在本机。</view>
+    <button class="btn" bindtap="draw">重新抽题</button>
+    <button class="btn btn-secondary" bindtap="wrongBook">错题本模式</button>
+  </view>
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="card">
+      <view><text class="badge">{{item.module}}</text><text class="badge">{{item.difficulty}}</text></view>
+      <view class="card-title">{{index+1}}. {{item.title}}</view>
+      <view>{{item.question}}</view>
+      <input class="input" data-id="{{item.id}}" bindinput="onInput" placeholder="输入答案" />
+      <button class="btn" data-id="{{item.id}}" bindtap="check">核对答案</button>
+      <view wx:if="{{item.feedback}}" class="{{item.ok ? 'ok' : 'bad'}}">{{item.feedback}}</view>
+      <view wx:if="{{item.show}}" class="muted">答案：{{item.answer}}。{{item.explain}}</view>
+    </view>
+  </block>
+</view>

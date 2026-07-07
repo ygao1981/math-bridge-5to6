@@ -1,15 +1,77 @@
-<view class="container">
-  <view class="hero">
+<view class="container home-page">
+  <view class="hero home-hero">
+    <view class="hero-kicker">MATH BRIDGE · 5 TO 6</view>
     <view class="hero-title">五升六数学桥</view>
-    <view class="hero-sub">离线小程序版：今日任务、知识图谱、速查卡、分层练习。</view>
+    <view class="hero-sub">先补断层，再预习主线。用知识图谱、速查卡、分层练习和避坑指南，帮孩子平稳衔接六年级数学。</view>
+    <view class="bridge-visual">
+      <view class="num">5</view>
+      <view class="bridge-line"></view>
+      <view class="num">6</view>
+    </view>
   </view>
-  <view class="card">
-    <view class="card-title">今日任务</view>
-    <view class="muted">建议每天 10 到 40 分钟，先保持连续性，再追求难度。</view>
+
+  <view class="today-card card">
+    <view class="today-head">
+      <view>
+        <view class="card-title">今日任务</view>
+        <view class="muted">建议每天 10–40 分钟，先保持连续性，再追求难度。</view>
+      </view>
+      <view class="day-badge">DAY</view>
+    </view>
+    <view class="task-row">
+      <view class="task-chip">10分钟快练</view>
+      <view class="task-chip">20分钟标准</view>
+      <view class="task-chip">40分钟深练</view>
+    </view>
     <button class="btn" bindtap="goPractice">开始练习</button>
   </view>
-  <view class="row">
-    <view class="card mini" bindtap="goMap"><view class="card-title">知识图谱</view><view class="muted">看前后关联</view></view>
-    <view class="card mini" bindtap="goFormulas"><view class="card-title">速查卡</view><view class="muted">背概念公式</view></view>
+
+  <view class="section-title">学习入口</view>
+  <view class="entry-grid">
+    <view class="entry-card green" bindtap="goMap">
+      <view class="entry-icon">🧠</view>
+      <view class="entry-title">知识图谱</view>
+      <view class="entry-desc">看前后关联</view>
+    </view>
+    <view class="entry-card orange" bindtap="goFormulas">
+      <view class="entry-icon">📘</view>
+      <view class="entry-title">速查卡</view>
+      <view class="entry-desc">背概念公式</view>
+    </view>
+    <view class="entry-card blue" bindtap="goPractice">
+      <view class="entry-icon">✍️</view>
+      <view class="entry-title">分层练习</view>
+      <view class="entry-desc">抽题秒批改</view>
+    </view>
+    <view class="entry-card red" bindtap="goMistakes">
+      <view class="entry-icon">⚠️</view>
+      <view class="entry-title">避坑指南</view>
+      <view class="entry-desc">错题复盘用</view>
+    </view>
+  </view>
+
+  <view class="section-title">暑假补桥路线</view>
+  <view class="route card">
+    <view class="route-item">
+      <view class="route-dot">1</view>
+      <view>
+        <view class="route-title">补断层</view>
+        <view class="muted">长方体正方体、分数乘法先补齐。</view>
+      </view>
+    </view>
+    <view class="route-item">
+      <view class="route-dot">2</view>
+      <view>
+        <view class="route-title">接六上</view>
+        <view class="muted">分数除法、比、百分数建立主线。</view>
+      </view>
+    </view>
+    <view class="route-item">
+      <view class="route-dot">3</view>
+      <view>
+        <view class="route-title">练错题</view>
+        <view class="muted">用避坑指南复盘错误原因。</view>
+      </view>
+    </view>
   </view>
 </view>

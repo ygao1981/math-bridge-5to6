@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="hero"><view class="hero-title">知识思维导图</view><view class="hero-sub">看清前后关联，知道为什么要学。</view></view>
+  <block wx:for="{{list}}" wx:key="title">
+    <view class="card">
+      <text class="badge">{{item.module}}</text>
+      <view class="card-title">{{item.title}}</view>
+      <view class="muted">等级：{{item.level}}</view>
+      <view>关联：{{item.links}}</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,2 @@
+.card { border-left: 8rpx solid #b7504a; }
+.ok,.bad { margin: 12rpx 0; }

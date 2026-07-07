@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="hero"><view class="hero-title">数学避坑指南</view><view class="hero-sub">错题复盘时先看这里。</view></view>
+  <block wx:for="{{list}}" wx:key="title">
+    <view class="card">
+      <view class="card-title">{{item.title}}</view>
+      <view class="bad">错误：{{item.wrong}}</view>
+      <view class="ok">正确：{{item.right}}</view>
+      <view class="muted">口诀：{{item.tip}}</view>
+    </view>
+  </block>
+</view>

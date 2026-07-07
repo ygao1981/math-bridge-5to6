@@ -1,1 +1,105 @@
-.mini { width: 43%; }
+.home-page { padding-top: 22rpx; }
+.home-hero { min-height: 360rpx; }
+.bridge-visual {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  margin-top: 28rpx;
+}
+.num {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, .94);
+  color: #287a49;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64rpx;
+  line-height: 1;
+  font-weight: 900;
+  box-shadow: 0 12rpx 26rpx rgba(0,0,0,.10);
+}
+.bridge-line {
+  flex: 1;
+  height: 22rpx;
+  border-radius: 999rpx;
+  background: linear-gradient(90deg, #ffd67f, #e28b2d);
+  box-shadow: 0 10rpx 20rpx rgba(0,0,0,.10);
+}
+.today-card { margin-top: -4rpx; }
+.today-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18rpx;
+}
+.day-badge {
+  min-width: 88rpx;
+  height: 88rpx;
+  border-radius: 28rpx;
+  background: #eef6ea;
+  color: #287a49;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-weight: 900;
+}
+.task-row {
+  display: flex;
+  gap: 12rpx;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.task-chip {
+  padding: 10rpx 16rpx;
+  border-radius: 999rpx;
+  background: #fff7e8;
+  color: #9b5b16;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+.entry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+}
+.entry-card {
+  min-height: 184rpx;
+  padding: 24rpx;
+  border-radius: 28rpx;
+  background: #fffdf8;
+  border: 1rpx solid #e8dfd0;
+  box-shadow: 0 12rpx 34rpx rgba(48,42,32,.07);
+  box-sizing: border-box;
+}
+.entry-card.green { border-top: 8rpx solid #287a49; }
+.entry-card.orange { border-top: 8rpx solid #e28b2d; }
+.entry-card.blue { border-top: 8rpx solid #2f78a8; }
+.entry-card.red { border-top: 8rpx solid #b7504a; }
+.entry-icon { font-size: 44rpx; margin-bottom: 10rpx; }
+.entry-title { font-size: 32rpx; font-weight: 900; color: #2f2a23; }
+.entry-desc { margin-top: 4rpx; color: #776f64; font-size: 25rpx; }
+.route { padding-bottom: 10rpx; }
+.route-item {
+  display: flex;
+  gap: 18rpx;
+  padding-bottom: 24rpx;
+}
+.route-dot {
+  min-width: 56rpx;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 18rpx;
+  background: #e9f3eb;
+  color: #287a49;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+.route-title { font-size: 30rpx; font-weight: 900; }

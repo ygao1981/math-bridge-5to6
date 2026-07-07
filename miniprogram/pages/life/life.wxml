@@ -1,0 +1,21 @@
+<view class="container life-page">
+  <view class="hero">
+    <view class="hero-kicker">LIFE MATH</view>
+    <view class="hero-title">生活化解读</view>
+    <view class="hero-sub">让孩子知道数学不是只为考试，而是用来做计划、做判断、解决生活问题。</view>
+  </view>
+
+  <block wx:for="{{list}}" wx:key="title">
+    <view class="card life-card">
+      <view>
+        <text class="badge">{{item.module}}</text>
+        <text class="badge badge-warm">{{item.scene}}</text>
+      </view>
+      <view class="card-title">{{item.title}}</view>
+      <view class="life-story">{{item.story}}</view>
+      <view class="formula-box">{{item.math}}</view>
+      <view class="muted">怎么用：{{item.use}}</view>
+      <view class="practice">小思考：{{item.ask}}</view>
+    </view>
+  </block>
+</view>

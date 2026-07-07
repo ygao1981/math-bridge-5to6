@@ -6,12 +6,14 @@
   </view>
 
   <view class="card action-card">
-    <view class="card-title">今日练习</view>
-    <view class="muted">每次随机抽 10 题。先做基础题，遇到错题再回到避坑指南复盘。</view>
-    <view class="btn-row">
-      <button class="btn" bindtap="draw">随机抽题</button>
-      <button class="btn btn-secondary" bindtap="wrongBook">错题本模式</button>
+    <view class="card-title">今日练习：{{modeText}}</view>
+    <view class="muted">快练适合热身，标准适合每天坚持，深练适合周末集中突破。</view>
+    <view class="mode-grid">
+      <button class="btn" data-mode="light" bindtap="drawMode">10分钟快练</button>
+      <button class="btn" data-mode="normal" bindtap="drawMode">20分钟标准</button>
+      <button class="btn" data-mode="deep" bindtap="drawMode">40分钟深练</button>
     </view>
+    <button class="btn btn-secondary" bindtap="wrongBook">错题本模式</button>
   </view>
 
   <block wx:for="{{list}}" wx:key="id">

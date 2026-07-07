@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/practice/practice",
+    "pages/formulas/formulas",
+    "pages/map/map",
+    "pages/mistakes/mistakes"
+  ],
+  "window": {
+    "navigationBarTitleText": "五升六数学桥",
+    "navigationBarBackgroundColor": "#287a49",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f7f4ed"
+  },
+  "tabBar": {
+    "color": "#776f64",
+    "selectedColor": "#287a49",
+    "backgroundColor": "#fffdf8",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/practice/practice", "text": "练习" },
+      { "pagePath": "pages/formulas/formulas", "text": "速查" },
+      { "pagePath": "pages/mistakes/mistakes", "text": "避坑" }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

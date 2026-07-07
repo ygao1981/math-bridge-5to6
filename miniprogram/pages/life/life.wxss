@@ -1,0 +1,4 @@
+.life-page { padding-top: 22rpx; }
+.life-card { border-left: 8rpx solid #e28b2d; }
+.life-story { margin: 12rpx 0; color: #5a4532; font-size: 29rpx; }
+.practice { margin-top: 16rpx; padding: 16rpx; border-radius: 18rpx; background: #fff7e8; color: #9b5b16; font-weight: 800; }

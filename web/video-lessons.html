@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>知识点教学视频｜五升六数学桥</title>
+  <link rel="stylesheet" href="css/style.css?v=0.4.0">
+  <style>
+    .video-card{border-left:6px solid var(--primary)}
+    .lesson-video{width:100%;border-radius:16px;margin:12px 0;background:#111}
+    .video-placeholder{margin:12px 0;padding:14px;border-radius:16px;background:#fff7e8;color:#6b4a22;font-weight:800}
+    .video-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+    .back-link{margin-top:16px;display:inline-flex}
+    .url-input{width:100%;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:white;font-family:ui-monospace,monospace;font-size:12px}
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="eyebrow">VIDEO LESSONS</div>
+      <h1>知识点教学视频</h1>
+      <p class="subtitle">每个核心知识点配一条 2–3 分钟讲解视频。先看懂，再做对应练习。</p>
+      <div class="header-actions">
+        <a class="btn secondary" href="index.html">返回首页</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <h2>视频列表</h2>
+      <p class="section-desc">把 HeyGen 生成的视频 HTTPS 地址填入 <code>web/js/videos.js</code> 里的 <code>url</code> 字段后，本页会自动显示播放器。</p>
+      <div class="grid two" id="videoList"></div>
+    </section>
+  </main>
+  <script src="js/videos.js?v=0.4.0"></script>
+  <script>
+    const list = window.MATH_BRIDGE_VIDEOS || [];
+    const root = document.getElementById('videoList');
+    root.innerHTML = list.map(item => `
+      <article class="card video-card">
+        <div class="video-meta"><span class="badge">${item.module}</span><span class="badge difficulty">${item.duration}</span><span class="badge ${item.url ? '' : 'hard'}">${item.url ? '可播放' : '待填链接'}</span></div>
+        <h3>${item.title}</h3>
+        <p class="muted"><strong>讲解目标：</strong>${item.objective}</p>
+        ${item.url ? `<video class="lesson-video" controls preload="metadata" src="${item.url}"></video>` : `<div class="video-placeholder">视频已生成后，把 mp4 的 HTTPS 地址填入 url 字段。</div>`}
+        <details><summary>脚本要点</summary><ol>${item.script.map(x => `<li>${x}</li>`).join('')}</ol></details>
+      </article>
+    `).join('');
+  </script>
+</body>
+</html>

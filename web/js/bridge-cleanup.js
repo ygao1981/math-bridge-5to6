@@ -31,4 +31,26 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = '看教学视频';
     headerActions.insertBefore(btn, headerActions.children[1] || null);
   }
+
+  function renderVideoLinks() {
+    if (document.querySelector('#videos-home')) return;
+    const list = window.MATH_BRIDGE_VIDEOS || [];
+    if (!list.length) return;
+    const section = document.createElement('section');
+    section.className = 'section';
+    section.id = 'videos-home';
+    section.innerHTML = '<div class="section-head"><div><h2>知识点教学视频</h2><p class="section-desc">11 个核心知识点视频已经接入。点击“播放视频”可直接打开对应视频。</p></div><a class="btn secondary" href="video-lessons.html">进入视频页</a></div><div class="grid two" id="videoHomeList"></div>';
+    const target = document.querySelector('#formulas') || document.querySelector('#practice');
+    if (target) target.insertAdjacentElement('beforebegin', section);
+    const box = section.querySelector('#videoHomeList');
+    box.innerHTML = list.map(v => '<article class="card video-card"><div class="card-tags"><span class="badge">' + v.module + '</span><span class="badge difficulty">' + v.duration + '</span></div><h3>' + v.title + '</h3><p class="muted">' + v.objective + '</p><div class="exercise-actions"><a class="btn" href="' + v.url + '" target="_blank" rel="noopener">播放视频</a><a class="btn secondary" href="video-lessons.html#' + v.id + '">详情页</a></div></article>').join('');
+  }
+
+  if (window.MATH_BRIDGE_VIDEOS) renderVideoLinks();
+  else {
+    const script = document.createElement('script');
+    script.src = 'js/videos.js?v=0.4.1';
+    script.onload = renderVideoLinks;
+    document.body.appendChild(script);
+  }
 });
